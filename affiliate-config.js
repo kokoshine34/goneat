@@ -18,7 +18,7 @@ window.GO_EAT_AFFILIATES = {
   agoda: {
     hotels: ""
   },
-  // Optional approved provider search-widget embed URLs.
+  <iframe border="0" src="https://www.trip.com/partners/ad/S21480720?Allianceid=8268583&SID=314249664&trip_sub1=" style="width:320px;height:320px" frameborder="0" scrolling="no" style="border:none" id="S21480720"></iframe>
   // Leave blank until the provider supplies the exact widget URL / code.
   widgets: {
     tripcomFlights: "",
