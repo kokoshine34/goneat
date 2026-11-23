@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Go & Eat Travel — search flights, hotels, attractions and train journeys. Explore more, travel better.">
+  <meta name="theme-color" content="#10231f">
+  <title>Go & Eat Travel — Explore More</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Noto+Sans+Myanmar:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="affiliate-config.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="#home" aria-label="Go & Eat home"><span class="brand-mark">G<span>&</span>E</span><span class="brand-name">GO <i>&</i> EAT<small>TRAVEL · FOOD · DISCOVER</small></span></a>
+    <nav class="main-nav" id="main-nav">
+      <a href="#booking" data-i18n="navBook">Book travel</a>
+      <a href="#destinations" data-i18n="navDestinations">Destinations</a>
+      <a href="#stories" data-i18n="navStories">Travel guides</a>
+      <a href="#about" data-i18n="navAbout">About</a>
+    </nav>
+    <div class="nav-actions">
+      <label class="language-switch"><span class="sr-only">Language</span><select id="language-select" aria-label="Choose language"><option value="en">EN</option><option value="my">မြန်မာ</option></select></label>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <div class="hero-shade"></div>
+    <div class="container hero-content">
+      <p class="eyebrow light" data-i18n="heroEyebrow">A JOURNEY FOR THE CURIOUS</p>
+      <h1 data-i18n="heroTitle">Explore more.<br><em>Travel better.</em></h1>
+      <p class="hero-copy" data-i18n="heroCopy">Find flights, stays, attractions and train journeys for your next adventure.</p>
+      <div class="hero-actions"><a class="button button-primary" href="#booking" data-i18n="heroCta">Plan your trip ↘</a><a class="text-link light-link" href="#stories" data-i18n="heroSecondary">Get inspired →</a></div>
+      <div class="hero-note"><span class="live-dot"></span><span data-i18n="heroNote">REAL PLACES. LOCAL FLAVOURS. PERSONAL STORIES.</span></div>
+    </div>
+  </section>
+
+  <section id="booking" class="booking-section section-pad">
+    <div class="container">
+      <div class="section-heading">
+        <div><p class="eyebrow" data-i18n="bookingEyebrow">START YOUR JOURNEY</p><h2 data-i18n="bookingTitle">Where would you <em>like to go?</em></h2></div>
+        <p class="section-description" data-i18n="bookingDesc">Search on Go & Eat, then complete your booking securely with our travel partners.</p>
+      </div>
+
+      <div class="booking-tabs" role="tablist" aria-label="Travel product">
+        <button class="booking-tab active" role="tab" aria-selected="true" data-tab="flights"><span>✈</span><span data-i18n="flights">Flights</span></button>
+        <button class="booking-tab" role="tab" aria-selected="false" data-tab="hotels"><span>⌂</span><span data-i18n="hotels">Hotels</span></button>
+        <button class="booking-tab" role="tab" aria-selected="false" data-tab="attractions"><span>♧</span><span data-i18n="attractions">Attractions</span></button>
+        <button class="booking-tab" role="tab" aria-selected="false" data-tab="trains"><span>▰</span><span data-i18n="trains">Trains</span></button>
+      </div>
+
+      <div class="booking-panel">
+        <form class="search-form" id="search-form">
+          <div class="field-grid" id="flight-fields">
+            <label><span data-i18n="from">From</span><input name="origin" autocomplete="off" placeholder="Singapore (SIN)" required></label>
+            <label><span data-i18n="to">To</span><input name="destination" autocomplete="off" placeholder="Bangkok (BKK)" required></label>
+            <label><span data-i18n="depart">Departure</span><input name="depart" type="date" required></label>
+            <label><span data-i18n="return">Return</span><input name="return" type="date" data-optional="true"></label>
+            <label><span data-i18n="travellers">Travellers</span><select name="travellers"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></label>
+          </div>
+          <div class="field-grid hidden" id="hotel-fields">
+            <label><span data-i18n="destination">Destination</span><input name="hotelDestination" placeholder="Bali, Indonesia" required></label>
+            <label><span data-i18n="checkin">Check-in</span><input name="checkin" type="date" required></label>
+            <label><span data-i18n="checkout">Check-out</span><input name="checkout" type="date" required></label>
+            <label><span data-i18n="guests">Guests</span><select name="guests"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></label>
+            <label><span data-i18n="rooms">Rooms</span><select name="rooms"><option selected>1</option><option>2</option><option>3</option><option>4</option></select></label>
+          </div>
+          <div class="field-grid hidden" id="attraction-fields">
+            <label><span data-i18n="destination">Destination</span><input name="attractionDestination" placeholder="Singapore" required></label>
+            <label><span data-i18n="visitDate">Visit date</span><input name="visitDate" type="date" data-optional="true"></label>
+            <label><span data-i18n="people">People</span><select name="people"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option></select></label>
+          </div>
+          <div class="field-grid hidden" id="train-fields">
+            <label><span data-i18n="from">From</span><input name="trainOrigin" placeholder="Kuala Lumpur" required></label>
+            <label><span data-i18n="to">To</span><input name="trainDestination" placeholder="Penang" required></label>
+            <label><span data-i18n="depart">Travel date</span><input name="trainDate" type="date" required></label>
+            <label><span data-i18n="travellers">Travellers</span><select name="trainTravellers"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option></select></label>
+          </div>
+          <div class="search-actions">
+            <p class="form-note" data-i18n="searchNote">You will continue to our travel partner to view available options and complete your booking.</p>
+            <button class="button button-primary search-button" type="submit"><span data-i18n="search">Search options</span> ↗</button>
+          </div>
+        </form>
+        <div class="partner-row"><span data-i18n="partnerLabel">Booking partners</span><strong>Trip.com</strong><strong>Agoda</strong></div>
+        <p class="integration-note" id="integration-note" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust-strip"><div class="container trust-grid"><div><strong>4</strong><span data-i18n="trustProducts">travel categories</span></div><div><strong>2</strong><span data-i18n="trustPartners">booking partners</span></div><div><strong>2</strong><span data-i18n="trustLanguages">languages</span></div><div><strong>1</strong><span data-i18n="trustPromise">easy travel starting point</span></div></div></section>
+
+  <section id="destinations" class="section-pad destinations-section">
+    <div class="container">
+      <div class="section-heading"><div><p class="eyebrow" data-i18n="destEyebrow">WHERE TO NEXT?</p><h2 data-i18n="destTitle">Featured <em>destinations</em></h2></div><p class="section-description" data-i18n="destDesc">A little inspiration for your next escape.</p></div>
+      <div class="destination-grid">
+        <a class="destination-card destination-large" href="#booking"><img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1400&q=85" alt="Vietnam limestone islands" loading="lazy"><span class="card-number">01 / ASIA</span><span class="destination-label"><small>LANDSCAPES & CULTURE</small>Vietnam <b>↗</b></span></a>
+        <a class="destination-card" href="#booking"><img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=1000&q=85" alt="Kuala Lumpur skyline" loading="lazy"><span class="card-number">02 / ASIA</span><span class="destination-label"><small>CITY & FOOD</small>Malaysia <b>↗</b></span></a>
+        <a class="destination-card" href="#booking"><img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=1000&q=85" alt="Singapore skyline" loading="lazy"><span class="card-number">03 / ASIA</span><span class="destination-label"><small>LOCAL DISCOVERIES</small>Singapore <b>↗</b></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="stories" class="section-pad story-section">
+    <div class="container story-layout">
+      <div class="story-image"><img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1200&q=85" alt="Mountain lake and travel scenery" loading="lazy"><span class="image-stamp">GO<br>&<br>EAT</span></div>
+      <div class="story-content"><p class="eyebrow" data-i18n="journalEyebrow">THE TRAVEL JOURNAL</p><h2 data-i18n="journalTitle">Take the scenic<br><em>route.</em></h2><p data-i18n="journalCopy">Thoughtful guides, practical tips and first-hand experiences to help you make more of every trip.</p><ul class="story-list"><li><span>01</span><span data-i18n="journal1">Destination inspiration</span></li><li><span>02</span><span data-i18n="journal2">Itineraries & travel tips</span></li><li><span>03</span><span data-i18n="journal3">Local experiences</span></li></ul><a class="button button-dark" href="#about" data-i18n="journalCta">Discover Go & Eat ↗</a></div>
+    </div>
+  </section>
+
+  <section id="about" class="about-section section-pad"><div class="container about-grid"><p class="eyebrow" data-i18n="aboutEyebrow">A LITTLE ABOUT US</p><div><h2 data-i18n="aboutTitle">Curiosity is our<br><em>favourite compass.</em></h2><p data-i18n="aboutCopy">Go & Eat celebrates the joy of discovering new places, local food and memorable travel experiences. Follow our journey for destination ideas and inspiration.</p><div class="social-links"><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook ↗</a><a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok ↗</a><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube ↗</a></div></div></div></section>
+</main>
+
+<footer class="site-footer"><div class="container footer-top"><a class="brand brand-footer" href="#home"><span class="brand-mark">G<span>&</span>E</span><span class="brand-name">GO <i>&</i> EAT<small>TRAVEL · FOOD · DISCOVER</small></span></a><p data-i18n="footerTag">Explore more. Eat well. Live the journey.</p><a class="back-top" href="#home" data-i18n="backTop">BACK TO TOP ↑</a></div><div class="container footer-bottom"><span>© <span id="year"></span> Go & Eat. <span data-i18n="rights">All rights reserved.</span></span><span data-i18n="affiliateDisclosure">Go & Eat may earn a commission from qualifying bookings.</span></div></footer>
+
+<div class="modal-backdrop hidden" id="partner-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-card"><button class="modal-close" id="modal-close" aria-label="Close">×</button><p class="eyebrow">GO & EAT TRAVEL</p><h2 id="modal-title">Continue with our partner</h2><p id="modal-copy">Your booking will be completed on the provider's website.</p><div id="partner-options" class="partner-options"></div><p class="fine-print" data-i18n="modalDisclosure">Go & Eat may receive a commission if you book through our partner links. Your booking and payment are handled by the provider.</p></div>
+</div>
+</body>
+</html>
